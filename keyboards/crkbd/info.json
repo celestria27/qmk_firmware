@@ -16,7 +16,9 @@
         "extrakey": true,
         "mousekey": true,
         "nkro": true,
-        "oled": true
+        "oled": true,
+        "rgb_matrix": true,
+        "wpm": true
     },
     "build": {
         "lto": true

@@ -48,7 +48,7 @@ enum custom_keycodes {
 
 // Right-hand home row mods
 #define SFT_J   RSFT_T(KC_J)
-#define CTL_K   RCTL_T(KC_K)
+#define CTL_K   LCTL_T(KC_K)
 #define ALT_L   LALT_T(KC_L)
 #define GUI_SCL RGUI_T(KC_SCLN)
 #define RALT_DT RALT_T(KC_DOT)
@@ -69,7 +69,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [_LOWER] = LAYOUT_split_3x5_3(
   //,-------------------------------------------.                    ,--------------------------------------------.
-      KC_ESC, KC_AMPR, KC_ASTR, XXXXXXX, XXXXXXX,                         KC_6,    KC_7, KC_LPRN, KC_RPRN,    KC_0,
+      KC_ESC, KC_AMPR, KC_ASTR, XXXXXXX, XXXXXXX,                      KC_QUOT,  KC_DQT, KC_LPRN, KC_RPRN,    KC_0,
   //|-------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------|
      XXXXXXX,  KC_DLR, KC_PERC, KC_CIRC, XXXXXXX,                      KC_MINS,  KC_EQL, KC_LBRC, KC_RBRC, KC_BSLS,
   //|-------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------|
@@ -81,7 +81,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [_RAISE] = LAYOUT_split_3x5_3(
   //,-------------------------------------------.                    ,--------------------------------------------.
-      KC_TAB,    KC_7,    KC_8,    KC_9, XXXXXXX,                         KC_6,    KC_7,    KC_8,    KC_9,  KC_DEL,
+      KC_TAB,    KC_7,    KC_8,    KC_9,    KC_0,                      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,  KC_DEL,
   //|-------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------|
      XXXXXXX,    KC_4,    KC_5,    KC_6, XXXXXXX,                      KC_LEFT, KC_DOWN,   KC_UP,KC_RIGHT, XXXXXXX,
   //|-------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------|
@@ -106,7 +106,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 #ifdef OLED_ENABLE
 
-#ifdef RIGHT_SIDE
+#ifdef LEFT_SIDE
 /* KEYBOARD SPACESHIP START */
 
 /* advanced settings */
@@ -592,7 +592,7 @@ bool oled_task_user(void)
 {
     /* Get current WPM */
     current_wpm   = get_current_wpm();
-#ifdef RIGHT_SIDE
+#ifdef LEFT_SIDE
     led_usb_state = host_keyboard_led_state();
 
     print_spaceship();

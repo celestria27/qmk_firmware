@@ -23,18 +23,15 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#define USE_MATRIX_I2C
 
 // Configure the global tapping term (default: 200ms)
-#define TAPPING_TERM 180
+#define TAPPING_TERM 200
 
 // Enable rapid switch from tap to hold, disables double tap hold auto-repeat.
-#define QUICK_TAP_TERM 0
+// #define QUICK_TAP_TERM 0
 
 /* Select hand configuration */
 #define MASTER_LEFT
-// #define RIGHT_SIDE
+#define LEFT_SIDE
 // #define MASTER_RIGHT
 // #define EE_HANDS
-
-//#define QUICK_TAP_TERM 0
-//#define TAPPING_TERM 100
 
 #define SPLIT_WPM_ENABLE
